@@ -55,9 +55,24 @@ In order to find invalid data in the categorical columns, we looked at the uniqu
 
 For numerical columns, the describe() function was used to look for invalid data points in yearsExperience, milesFromMetropolis and salary features. 
 
+![train_df Describe](https://github.com/ali-javaid93/Salaries-Prediction-Portfolio-Project/blob/main/images/train_df_describe.jpg)
 
+For Years of Experience, the min and max values are 0 and 24 years respectively, while the mean is 11.9 years. 
+For Miles from Metropolis, the min and max values are 0 and 99 miles respectively, while the mean is 49.5 miles. 
+For Salary, the min and max values are $0 and $301K respecitvely, while the mean is $116.1. 
+
+While both Years of Experience and Miles from Metropolis can be 0, a salary for a paid job cannot be 0. Therefore, one or more job positions have $0 for salary. We found that only 5 rows had $0 salary, which can be easily dropped from the dataframe. However, this solution may not fully remove invalid data in the salary column. 
 
 #### Removing Outliers in Salary column
+
+To ensure we get rid of all invalid data in the salary column, we first have to plot the distribution of salary to find the outliers. 
+
+![Salary_distribution](https://github.com/ali-javaid93/Salaries-Prediction-Portfolio-Project/blob/main/images/salary_distribution.jpg)
+
+The boxplot above shows outliers in the lower and upper bands of the distribution. The salary column is normaly distributed. Using the boxplot, we defined the Inter-Quartile range of salary column with the upper and lower bounds to be 220.5 and 8.5 respectively. Values below $8.5K and above $220.5K are outliers and can be considered as invalid data. 
+On further expection, the outliers in the lower band are all $0 values that were then dropped from the dataframe.
+
+The outliers in the upper band, however, don't appear to be extreme values. It's not unusual for a CEO or other executive roles to earn up to $300K annually. Out of 7117 outliers in the upper band, only 20 jobs were of Junior positions. However, all these junior positions were either in Finance or Oil industries which are known to offer higher salaries. In addition, most of the outliers belong to jobs with CEO, CFO and CTO positions. Thus, we do not have enough evidence to label these outliers as invalid data points. These outliers were kept in the data. 
 
 ## Exploratory Data Analysis
 
