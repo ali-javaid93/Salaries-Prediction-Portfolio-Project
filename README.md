@@ -41,9 +41,21 @@ The target feature is:
 
 ## Data Cleaning
 
+Before starting with EDA, we will make sure that the datasets are complete without missing and invalid values. All three files contain 1 million rows. 
+
+At this point we will also separate columns into numerical and categorical columns. yearsExperience, milesFromMetropolis and salary are the only numerical columns, the rest are categorical columns. 
+
 #### Finding Missing Values
 
+No Null/NaN values were found in the dataset. The None values in degree and major columns refer to candidates without a degree and major. Therefore, these none values are not considered missing values. 
+
 #### Finding invalid data
+
+In order to find invalid data in the categorical columns, we looked at the unique values of each feature along with their counts. No invalid data was found. 
+
+For numerical columns, the describe() function was used to look for invalid data points in yearsExperience, milesFromMetropolis and salary features. 
+
+
 
 #### Removing Outliers in Salary column
 
