@@ -76,9 +76,17 @@ The outliers in the upper band, however, don't appear to be extreme values. It's
 
 ## Exploratory Data Analysis
 
+After cleaning the data by removing missing, duplicated, and invalid values, we will proceed with exploring each feature in comparison with salary column. The purpose of this section is to see which feature correlates more with the salary and whether the correlation is a positive or a negative correlation. The final step is to create a correlation matrix to quanitfy the correlation among all features. 
+
 ### Summarizing Each Feature
 
+A function was created that:
+- plot the distribution of samples on the feature
+- visualize the dependance of salary on the feature
+
 #### companyId
+
+
 
 #### jobType
 
