@@ -148,7 +148,7 @@ After summarizing each feature and observing their trends with respect to salary
 
 Before creating a correlation matrix, we will encode the categorical columns to numerical ones through label encoding. Once categorical columns are encoded, we plot the correlation matrix and observe the trends further. 
 
-![Correlation_Matrix]()
+![Correlation_Matrix](https://github.com/ali-javaid93/Salaries-Prediction-Portfolio-Project/blob/main/images/correlation_matrix.jpg)
 
 **Observations**
 
@@ -158,3 +158,7 @@ Before creating a correlation matrix, we will encode the categorical columns to 
 4. Salary has little to no correlation with companyId
 
 Therefore, the features of interest are jobType, degree, major, industry, yearsExperience and milesFromMetropolis.
+
+## Data Preprocessing
+
+(This section is in progress)
