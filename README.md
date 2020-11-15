@@ -84,21 +84,77 @@ A function was created that:
 - plot the distribution of samples on the feature
 - visualize the dependance of salary on the feature
 
-#### companyId
+**Company ID**
+
+**No Correlation**
+
+Company Id are arbitrary indentifiers that are unique for each company. Therefore, this feature has no relation with salary.
+
+![companyId_summary](https://github.com/ali-javaid93/Salaries-Prediction-Portfolio-Project/blob/main/images/companyId_summary.jpg)
+
+**Job Type**
+
+**More executive job types relate to higher salaries**
+
+Janitors earn the least. The job types show increasing salary trend as the job type gets more advanced/executive. 
 
 
+![jobType_summary](https://github.com/ali-javaid93/Salaries-Prediction-Portfolio-Project/blob/main/images/jobType_summary.jpg)
 
-#### jobType
+**Degree**
 
-#### degree
+**The higher the qualification, the higher the salary is.**
 
-#### major
+Candidates with higher education degrees earn more, while candidates without a degree or with just High School diploma earn the least. 
 
-#### yearsExperience
+![degree_summary](https://github.com/ali-javaid93/Salaries-Prediction-Portfolio-Project/blob/main/images/degree_summary.jpg)
 
-#### milesFromMetropolis
+**Major**
 
-#### industry
+**Engineering, Business, and Science majors earn more than Literature**
+
+Candidates that graduated with major in Engineering, Business, and Sciences earn significantly more than Literature. Candidates without a major earn the least. 
+
+![major_summary](https://github.com/ali-javaid93/Salaries-Prediction-Portfolio-Project/blob/main/images/major_summary.jpg)
+
+**Years of Experience**
+
+**Positive correlation between years of experience and salary**
+
+Individuals that are ahead in their career with more experience earn much more than indiviudals with little to no experience. 
+
+![yearsExperience_summary](https://github.com/ali-javaid93/Salaries-Prediction-Portfolio-Project/blob/main/images/yearsExperience_summary.jpg)
+
+**Distance from Metroplois**
+
+**Negative correlation between distance from city center and salary**
+
+Jobs that are closest to a Metropolis city or right in the center offer much higher salaries. The further the job is from the city centre, the less the salary is.
+
+
+![milesFromMetropolis_summary](https://github.com/ali-javaid93/Salaries-Prediction-Portfolio-Project/blob/main/images/milesFromMetropolis_summary.jpg)
+
+**Industry**
+
+**Job industry shows a trend in the salary**
+
+Jobs in Oil and Finance industries offer the highest, followed by Web, Health and Autombolie industries. Service and Education industries offer the lowest salaries. 
+
+![industry_summary](https://github.com/ali-javaid93/Salaries-Prediction-Portfolio-Project/blob/main/images/industry_summary.jpg)
 
 ### Correlation Matrix
 
+After summarizing each feature and observing their trends with respect to salary, we will create a correlation matrix to quantify the correlation among all features. 
+
+Before creating a correlation matrix, we will encode the categorical columns to numerical ones through label encoding. Once categorical columns are encoded, we plot the correlation matrix and observe the trends further. 
+
+![Correlation_Matrix]()
+
+**Observations**
+
+1. Major and Degree have the highest correlation with each other with a value of 0.85
+2. Salary correlates more with JobType, degree, majore, Industry, yearsExperience, and milesFromMetropolis.
+3. Salary has a negative correlation only with milesFromMetropolis
+4. Salary has little to no correlation with companyId
+
+Therefore, the features of interest are jobType, degree, major, industry, yearsExperience and milesFromMetropolis.
