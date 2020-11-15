@@ -159,6 +159,6 @@ Before creating a correlation matrix, we will encode the categorical columns to 
 
 Therefore, the features of interest are jobType, degree, major, industry, yearsExperience and milesFromMetropolis.
 
-## Data Preprocessing
+## Data Preprocessing & Predictive Modelling
 
 (This section is in progress)
