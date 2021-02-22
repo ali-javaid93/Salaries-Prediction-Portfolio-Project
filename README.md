@@ -178,6 +178,32 @@ This project comes under the Supervised Learning where we are using existing tar
 
 Linear Regression is a good approach if we want to create a model that runs fast. However, we are not limited by time in this project, therefore, both Random Forest and Gradient Boost can be utilized to produce models with higher accuracy than Linear Regression. 
 
-We used cross validation (cross_val_score) from sklearn.model_selection to perform a 2-fold cross validation on our models. 
+We used cross validation (cross_val_score) from sklearn.model_selection to perform a 2-fold cross validation on our models. 2 processes were run in parallel while verbose level was kept at 5. The following hyperparameters were set for Random Forest Regressor and Gradient Boost Regressor:
+
+#### Random Forest Regressor
+1. max depth = 25
+2. number of estimators = 150
+3. max features = 30
+4. min samples split = 60
+
+#### Gradient Boost Regressor
+1. max depth = 5
+2. number of estimators = 150
+
+All three models were trained using the training data and their Average mean squared error along with standard deviation was observed as below:
+
+| Model | Average MSE | SD during CV |
+| --- | --- | --- |
+| Linear Regression | 384.417 | 0.197 |
+| Random Forest | 367.962 | 0.207 |
+| Gradient Boost | 357.301 | 0.082 |
+
+**We saw the lowest Average Mean Squared Error with Gradient Boost Regressor Model making it the best model among the three used above**. Therefore, we used this model to create salary predictions for test dataset and save it in predictions.csv file. 
+
+### Feature Importance
+Last step is to calculate feature importance by assign a score to input features based on how useful they are at predicting the target variable. The sklearn.ensemble Gradient Boost Regressor comes with the feature_importance_ attribute which was used to calculate the feature importance for all variables as shown below:
+
+![Feature Importance]()
+
 
 
