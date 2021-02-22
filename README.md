@@ -159,6 +159,25 @@ Before creating a correlation matrix, we will encode the categorical columns to 
 
 Therefore, the features of interest are jobType, degree, major, industry, yearsExperience and milesFromMetropolis.
 
-## Data Preprocessing & Predictive Modelling
+## Predictive Modelling
+### Objectives:
+1. Data Cleaning and Preprocessing (via One Hot Encoding)
+2. Initialize models appropriate for our problem
+3. Train models with training data set
+4. Evaluate model performance by measuring Mean Squared Error
+5. Select model with the lowest Mean Squared Error and use it to create predictions for Test dataset
 
-(This section is in progress)
+The Exploratory Data Analysis on the Salaries dataset helped us to identify possible data cleaning and preprossing needed before using data to train a predictive model. The dataset was cleaned by removing the outliers in the Salary column. In addition, a **One Hot Encoding** was performed to convert categorical attributes (CompanyID, JobType, Degree, Major, and Industry) to numerical columns. The other numerical attributes are yearsExperience and milesFromMetropolis, with Salary as our target variable. 
+
+### Suggested Models
+This project comes under the Supervised Learning where we are using existing target variable to train a model before using it to predict a numerical value (Salary). Therefore, in order to create a regression relation between variables and our target, we will consider the following ML models to train:
+
+1. Linear Regression
+2. Random Forest Regressor
+3. Gradient Boost Regressor
+
+Linear Regression is a good approach if we want to create a model that runs fast. However, we are not limited by time in this project, therefore, both Random Forest and Gradient Boost can be utilized to produce models with higher accuracy than Linear Regression. 
+
+We used cross validation (cross_val_score) from sklearn.model_selection to perform a 2-fold cross validation on our models. 
+
+
