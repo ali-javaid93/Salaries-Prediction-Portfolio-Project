@@ -203,7 +203,17 @@ All three models were trained using the training data and their Average mean squ
 ### Feature Importance
 Last step is to calculate feature importance by assign a score to input features based on how useful they are at predicting the target variable. The sklearn.ensemble Gradient Boost Regressor comes with the feature_importance_ attribute which was used to calculate the feature importance for all variables as shown below:
 
-![Feature Importance]()
+![Feature Importance](https://github.com/ali-javaid93/Salaries-Prediction-Portfolio-Project/blob/main/images/feature_importance.png)
 
+Due to One Hot Encoding, the categorical variables are splitted into variables for each type of value. Through features importance, we can observe that the features that are most useful in prediciting a salary are:
 
+1. jobType_Janitor
+2. yearsExperience
+3. milesFromMetropolis
+4. major_None
+5. jobType_Junior
 
+These results are also reflected in the correlation matrix above. 
+
+## Conclusion
+In this project, we were able to create a predictive model that help us predict a job salary based on job information with attributes including job title, degree required, years of Experience, distance from city centre, job industry, etc. We were able to create a predictive model using Gradient Boost Regressor with a relatively lower Mean Sqaured Error of 357.301.  
